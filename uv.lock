@@ -497,6 +497,7 @@ name = "pykoclaw-chat"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "claude-agent-sdk" },
     { name = "click" },
     { name = "pykoclaw" },
 ]
@@ -508,6 +509,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "claude-agent-sdk" },
     { name = "click" },
     { name = "pykoclaw", directory = "../pykoclaw" },
 ]

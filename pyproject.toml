@@ -3,7 +3,7 @@ name = "pykoclaw-chat"
 version = "0.1.0"
 description = "Chat plugin for pykoclaw"
 requires-python = ">=3.12"
-dependencies = ["pykoclaw @ file:///home/akaihola/prg/pykoclaw/pykoclaw", "click"]
+dependencies = ["pykoclaw @ file:///home/akaihola/prg/pykoclaw/pykoclaw", "click", "claude-agent-sdk"]
 
 [project.entry-points."pykoclaw.plugins"]
 chat = "pykoclaw_chat:ChatPlugin"
