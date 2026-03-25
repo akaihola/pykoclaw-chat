@@ -37,18 +37,11 @@ async def _run_chat(name: str) -> None:
     db = init_db(settings.db_path)
     data_dir = settings.data
 
-    conv_dir = data_dir / "conversations" / name
-    conv_dir.mkdir(parents=True, exist_ok=True)
-
     _setup_readline(data_dir / "history")
 
     global_claude_md = data_dir / "CLAUDE.md"
     if not global_claude_md.exists():
         global_claude_md.touch()
-
-    conv_claude_md = conv_dir / "CLAUDE.md"
-    if not conv_claude_md.exists():
-        conv_claude_md.touch()
 
     global_content = global_claude_md.read_text().strip()
     system_prompt = global_content if global_content else None
